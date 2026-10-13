@@ -46,4 +46,4 @@ class HumanoidEnv(TrainingEnv):
     @property
     def observation_size(self) -> int:
         """The size of the observations."""
-        return 56
+        return 1 + len(self.task._get_torso_orientation(None)) + (self.task.model.nq - 7) + self.task.model.nv
