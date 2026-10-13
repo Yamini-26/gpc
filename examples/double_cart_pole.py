@@ -29,7 +29,7 @@ if __name__ == "__main__":
 
     # Set up the environment and save file
     env = DoubleCartPoleEnv(episode_length=400)
-    save_file = "/tmp/double_cart_pole_policy.pkl"
+    save_file = "checkpoints/double_cart_pole_policy.pkl"
 
     if args.task == "train":
         # Train the policy and save it to a file
@@ -46,7 +46,7 @@ if __name__ == "__main__":
             ctrl,
             net,
             num_policy_samples=16,
-            log_dir="/tmp/gpc_double_cart_pole",
+            log_dir="checkpoints/gpc_double_cart_pole",
             num_iters=50,
             num_envs=256,
             num_epochs=100,

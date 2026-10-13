@@ -29,7 +29,7 @@ if __name__ == "__main__":
 
     # Set up the environment and save file
     env = HumanoidEnv(episode_length=400)
-    save_file = "/tmp/humanoid_policy.pkl"
+    save_file = "checkpoints/humanoid_policy.pkl"
 
     if args.task == "train":
         # Train the policy and save it to a file
@@ -53,7 +53,7 @@ if __name__ == "__main__":
             ctrl,
             net,
             num_policy_samples=32,
-            log_dir="/tmp/gpc_humanoid",
+            log_dir="checkpoints/gpc_humanoid",
             num_epochs=10,
             num_iters=50,
             num_envs=128,

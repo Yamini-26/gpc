@@ -29,7 +29,7 @@ if __name__ == "__main__":
 
     # Set up the environment and save file
     env = ParticleEnv(episode_length=100)
-    save_file = "/tmp/particle_policy.pkl"
+    save_file = "checkpoints/particle_policy.pkl"
 
     if args.task == "train":
         # Train the policy and save it to a file
@@ -46,7 +46,7 @@ if __name__ == "__main__":
             ctrl,
             net,
             num_policy_samples=8,
-            log_dir="/tmp/gpc_particle",
+            log_dir="checkpoints/gpc_particle",
             num_iters=10,
             num_envs=128,
             batch_size=128,

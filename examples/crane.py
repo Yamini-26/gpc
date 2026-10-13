@@ -29,7 +29,7 @@ if __name__ == "__main__":
 
     # Set up the environment and save file
     env = CraneEnv(episode_length=500)
-    save_file = "/tmp/crane_policy.pkl"
+    save_file = "checkpoints/crane_policy.pkl"
 
     if args.task == "train":
         # Train the policy and save it to a file
@@ -47,7 +47,7 @@ if __name__ == "__main__":
             ctrl,
             net,
             num_policy_samples=2,
-            log_dir="/tmp/gpc_crane",
+            log_dir="checkpoints/gpc_crane",
             num_iters=10,
             num_envs=512,
             num_videos=4,

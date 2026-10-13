@@ -29,7 +29,7 @@ if __name__ == "__main__":
 
     # Set up the environment and save file
     env = CartPoleEnv(episode_length=200)
-    save_file = "/tmp/cart_pole_policy.pkl"
+    save_file = "checkpoints/cart_pole_policy.pkl"
 
     if args.task == "train":
         # Train the policy and save it to a file
@@ -46,7 +46,7 @@ if __name__ == "__main__":
             ctrl,
             net,
             num_policy_samples=2,
-            log_dir="/tmp/gpc_cart_pole",
+            log_dir="checkpoints/gpc_cart_pole",
             num_iters=10,
             num_envs=128,
             num_epochs=100,

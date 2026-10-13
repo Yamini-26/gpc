@@ -29,7 +29,7 @@ if __name__ == "__main__":
 
     # Set up the environment and save file
     env = PushTEnv(episode_length=400)
-    save_file = "/tmp/pusht_policy.pkl"
+    save_file = "checkpoints/pusht_policy.pkl"
 
     if args.task == "train":
         # Train the policy and save it to a file
@@ -47,7 +47,7 @@ if __name__ == "__main__":
             ctrl,
             net,
             num_policy_samples=32,
-            log_dir="/tmp/gpc_pusht",
+            log_dir="checkpoints/gpc_pusht",
             num_iters=20,
             num_envs=128,
             num_epochs=10,

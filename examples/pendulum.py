@@ -29,7 +29,7 @@ if __name__ == "__main__":
 
     # Set up the environment and save file
     env = PendulumEnv(episode_length=200)
-    save_file = "/tmp/pendulum_policy.pkl"
+    save_file = "checkpoints/pendulum_policy.pkl"
 
     if args.task == "train":
         # Train the policy and save it to a file
@@ -46,7 +46,7 @@ if __name__ == "__main__":
             ctrl,
             net,
             num_policy_samples=2,
-            log_dir="/tmp/gpc_pendulum",
+            log_dir="checkpoints/gpc_pendulum",
             num_epochs=10,
             num_iters=10,
             num_envs=128,

@@ -27,7 +27,7 @@ if __name__ == "__main__":
 
     # Set up the environment and save file
     env = WalkerEnv(episode_length=500)
-    save_file = "/tmp/walker_policy.pkl"
+    save_file = "checkpoints/walker_policy.pkl"
 
     if args.task == "train":
         # Train the policy and save it to a file
@@ -44,7 +44,7 @@ if __name__ == "__main__":
             env,
             ctrl,
             net,
-            log_dir="/tmp/gpc_walker",
+            log_dir="checkpoints/gpc_walker",
             num_policy_samples=16,
             num_iters=20,
             num_envs=128,
